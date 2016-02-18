@@ -49,7 +49,7 @@
    				<br>
    				<input type='checkbox' name='add_spe'> <span>Add Special Character</span>
    				<br>
-   				<input type='submit' class='btn btn-default' value='Generate'>
+   				<input type='submit' class='btn btn-danger' value='Generate'>
    				<?php echo $error ?>
 			</form>
 			<br>
