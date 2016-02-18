@@ -27,14 +27,32 @@ ini_set('display_errors', 1);
 					echo $words[$select];
 				}
 				?>
+				<?php
+				if($addNum){
+					echo rand (0, 99);
+				}
+				?>
+				<?php
+				if($addSpe){
+					echo $speChars[rand(0,5)];
+				}
+				?>
+
 			</h2>
-
-
+			<br>
+			<br>
 			<form action='index.php' method='GET'>
+				<label>
 				<input type='text' id="num-word-input" class='form-control' name='word_count' placeholder='4'>Number of Words
+				</label>
 				<br>
+				<label>
       			<input type='checkbox' name='add_num'> Add Number
+   				</label>
+   				<br>
+   				<label>
    				<input type='checkbox' name='add_spe'> Add Special
+   				</label>
    				<br>
    				<input type='submit' class='btn btn-default' value='Generate'>
 			</form>
