@@ -55,7 +55,7 @@
 			<br>
 			<p>The theory behind the tech:</p>
 			<a href="http://xkcd.com/936/">
-			<img class='comic' src='images/password_strength.png' alt='xkcd style passwords'>
+			<img class='comic' src='Images/password_strength.png' alt='xkcd style passwords'>
 			</a>
 		</div>
 
