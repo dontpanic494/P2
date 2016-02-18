@@ -19,8 +19,8 @@
 
 	<body>
 		<div class='container'>
-			<h1>Password Generator</h1>
-			<h2 class="generated-password">
+			<h1 class='title'>Password Generator</h1>
+			<h2 class='generated-password'>
 				<?php 
 				for($x=0; $x<$wordCount; $x++){
 					$select=array_rand($words);
