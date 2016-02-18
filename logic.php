@@ -19,8 +19,8 @@
 	if (!empty($formData['word_count'])) {
 		$wordCount = intval($formData['word_count']);
 	}
-	#Set default number of words to 4 if blank
-	if (empty($formData['word_count']) or ctype_alpha($count)){
+	#Set default number of words to 4 if blank or non-alpha-numberic character
+	if (empty($formData['word_count']) or ctype_alpha($count) or !ctype_alnum($count)){
 		$wordCount = 4;
 	}
 
