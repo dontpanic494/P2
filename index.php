@@ -1,6 +1,6 @@
 <?php
-error_reporting(-1); # Report all PHP errors
-ini_set('display_errors', 1);
+//error_reporting(-1); # Report all PHP errors
+//ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>
@@ -37,25 +37,26 @@ ini_set('display_errors', 1);
 					echo $speChars[rand(0,5)];
 				}
 				?>
-
 			</h2>
 			<br>
 			<br>
-			<form action='index.php' method='GET'>
+			<form action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>' method='GET'>
 				<label>
-				<input type='text' id="num-word-input" class='form-control' name='word_count' placeholder='4'>Number of Words
+				<input type='text' maxlength=1 id="num-word-input" class='form-control' name='word_count' value='4'>Number of Words (1-9)
 				</label>
 				<br>
-				<label>
-      			<input type='checkbox' name='add_num'> Add Number
-   				</label>
+      			<input type='checkbox' name='add_num'> <span>Add Number</span>
    				<br>
-   				<label>
-   				<input type='checkbox' name='add_spe'> Add Special
-   				</label>
+   				<input type='checkbox' name='add_spe'> <span>Add Special Character</span>
    				<br>
    				<input type='submit' class='btn btn-default' value='Generate'>
+   				<?php echo $error ?>
 			</form>
+			<br>
+			<p>The theory behind the tech:</p>
+			<a href="http://xkcd.com/936/">
+			<img class='comic' src='images/password_strength.png' alt='xkcd style passwords'>
+			</a>
 		</div>
 
 	</body>
