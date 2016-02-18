@@ -15,6 +15,11 @@
 	if ($count == '0') {
 		$error = '<p class="error"> Zero is not a valid entry! Reverting to default four word password.</p>';
 	}
+	#Confirm user didn't edit URL to allow larger wordCount
+	if ($count > 9) {
+		$count = 4;
+		$error = '<p class="error"> Hey! Use the form please! Reverting to default four word password.</p>';
+	}
 	#Pull input from page if not left black
 	if (!empty($formData['word_count'])) {
 		$wordCount = intval($formData['word_count']);
