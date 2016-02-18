@@ -7,7 +7,7 @@
 This project is an xkcd password generator. It takes a few input parameters, and outputs an xkcd-style password.
 
 ## Demo
-PENDING
+<https://youtu.be/HEqBcG0IQwo>
 
 ## Details for teaching team
 The number of words input field is limited to between 1-9, and this is validated server side.
