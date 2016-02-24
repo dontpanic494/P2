@@ -18,7 +18,27 @@
 	</head>
 
 	<body>
-		<div class='container'>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		      <a class="navbar-brand" href="#">John Lincoln</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li><a href="http://p1.johnlincoln.me">P1</a></li>
+		        <li class = "active"><a href="http://p2.johnlincoln.me">P2</a></li>
+		        <li><a href="http://p3.johnlincoln.me">P3</a></li>
+		        <li><a href="http://p4.johnlincoln.me">P4</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		<div class='row container'>
 			<h1 class='title'>Password Generator</h1>
 			<h2 class='generated-password'>
 				<?php 
@@ -54,11 +74,14 @@
 			</form>
 			<br>
 			<p>The theory behind the tech:</p>
-			<a href="http://xkcd.com/936/">
-			<img class='comic' src='Images/password_strength.png' alt='xkcd style passwords'>
-			</a>
+			<div class="row">
+				<a href="http://xkcd.com/936/">
+				<img class='center-block img-responsive' src='Images/password_strength.png' alt='xkcd style passwords'>
+				</a>
+			</div>
 		</div>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</body>
 
 </html>
